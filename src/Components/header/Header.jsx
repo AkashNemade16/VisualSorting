@@ -7,6 +7,8 @@ import {
     Button,
     IconButton,
 } from '@material-ui/core';
+import MenuListComposition from '../menu';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -19,22 +21,25 @@ const useStyles = makeStyles((theme) => ({
     title: {
       flexGrow: 1,
     },
+    
   }));
+
   
   export default function Header() {
     const classes = useStyles();
   
     return (
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar position="static" style={{backgroundColor:"grey"}}  >
           <Toolbar>
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
               
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              News
+              VisualSorting
             </Typography>
-            <Button color="inherit">Login</Button>
+            {/* <Button color="inherit">Algorithms</Button> */}
+            <MenuListComposition/>
           </Toolbar>
         </AppBar>
       </div>
