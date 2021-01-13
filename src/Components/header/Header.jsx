@@ -1,17 +1,15 @@
 import React from 'react';
 import {
-    makeStyles,
+    withStyles,
     AppBar,
     Toolbar,
     Typography,
     Button,
-    IconButton,
 } from '@material-ui/core';
-import MenuListComposition from '../menu';
+import SimpleMenu from '../Menu';
 
 
-
-const useStyles = makeStyles((theme) => ({
+const useStyles = theme => ({
     root: {
       flexGrow: 1,
     },
@@ -22,26 +20,29 @@ const useStyles = makeStyles((theme) => ({
       flexGrow: 1,
     },
     
-  }));
+  }); 
+
 
   
-  export default function Header() {
-    const classes = useStyles();
+   class Header extends React.Component{
+
+      render(){
+       
+        const {classes} = this.props; 
+          return (
+            <div className={classes.root}>
+            <AppBar position="static" style={{backgroundColor:"grey"}}  >
+            <Toolbar>
+                <Typography variant="h6" className={classes.title}>
+                VisualSorting
+                </Typography>
+               <SimpleMenu/>
+            
+            </Toolbar>
+            </AppBar>
+        </div>
+          )
+          }
+      }
   
-    return (
-      <div className={classes.root}>
-        <AppBar position="static" style={{backgroundColor:"grey"}}  >
-          <Toolbar>
-            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-              
-            </IconButton>
-            <Typography variant="h6" className={classes.title}>
-              VisualSorting
-            </Typography>
-            {/* <Button color="inherit">Algorithms</Button> */}
-            <MenuListComposition/>
-          </Toolbar>
-        </AppBar>
-      </div>
-    );
-  }
+      export default withStyles(useStyles)(Header);
