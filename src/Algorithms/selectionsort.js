@@ -1,12 +1,8 @@
-
-
-const numbers = [8,5,2,9,6,5,3]
-
-function selection(array){
-    for(i=0;i<array.length;i++){
+export default function selection(array){
+    for(let i=0;i<array.length;i++){
         let min = i;
         let minValue = array[i];
-        for(j=i+1;j<array.length;j++){
+        for(let j=i+1;j<array.length;j++){
             if(array[j]<array[min]){
                 min = j;
             }
@@ -19,4 +15,3 @@ function selection(array){
     } return array;
 }
 
-console.log(selection(numbers));
