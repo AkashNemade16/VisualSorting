@@ -12,6 +12,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "lint": "eslint",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -34,5 +35,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^7.17.0",
+    "eslint-plugin-disable": "^2.0.1"
   }
 }
