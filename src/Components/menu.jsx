@@ -6,8 +6,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 export default function SimpleMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+  const handleClick = () => {
+    setAnchorEl();// set a new Component
   };
 
   const handleClose = () => {
@@ -29,6 +29,8 @@ export default function SimpleMenu() {
         <MenuItem onClick={handleClose}>SelectionSort</MenuItem>
         <MenuItem onClick={handleClose}>InsertionSort</MenuItem>
         <MenuItem onClick={handleClose}>BubbleSort</MenuItem>
+        <MenuItem onClick={handleClose}>QuickSort</MenuItem>
+        <MenuItem onClick={handleClose}>MergeSort</MenuItem>
       </Menu>
     </div>
   );

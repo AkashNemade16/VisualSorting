@@ -1,6 +1,12 @@
+import { Paper } from '@material-ui/core';
 import React from 'react';
-const numbers = [4,6,9,5,4]
-function bubble(array){
+
+function rand(maxLimit = 100){
+    let rand = Math.random() * maxLimit;
+    return Math.floor(rand);
+}
+
+function Bubble (array)  {
     for(let i=0;i<=array.length;i++){
         for(let j=0;j<=array.length;j++){
             if(array[j]>array[j+1]){
@@ -9,20 +15,21 @@ function bubble(array){
                 array[j+1] = temp;
             }
         }
-    }return array;
+    }return (array);
+  
 }
 
+
+
 export default class BubbleSort extends React.Component{
-    constructor(){
-        super();
-        this.state={
-            
-        }
-    }
-    render(){
+    
+       render(){
+           console.log(this.props)
         return(
            <div>
-               
+               <Paper>
+                  
+               </Paper>
            </div> 
         );
     }

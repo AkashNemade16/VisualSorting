@@ -25,7 +25,12 @@ const useStyles = theme => ({
 
   
    class Header extends React.Component{
-
+        constructor(){
+            super();
+            this.state={
+                inputvalue:null
+            }
+        }
       render(){
        
         const {classes} = this.props; 
@@ -36,8 +41,9 @@ const useStyles = theme => ({
                 <Typography variant="h6" className={classes.title}>
                 VisualSorting
                 </Typography>
+                
                <SimpleMenu/>
-            
+               
             </Toolbar>
             </AppBar>
         </div>
