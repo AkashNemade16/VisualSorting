@@ -12,7 +12,7 @@ export default class Visual extends React.Component{
        return(
            <div className='visual'>
                <Grid container spacing={3}>
-                    <BubbleSort values={[6,9,4,2,1]}/>
+                    
                </Grid>
            </div>
        )

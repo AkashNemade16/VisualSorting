@@ -25,12 +25,7 @@ const useStyles = theme => ({
 
   
    class Header extends React.Component{
-        constructor(){
-            super();
-            this.state={
-                inputvalue:null
-            }
-        }
+      
       render(){
        
         const {classes} = this.props; 
