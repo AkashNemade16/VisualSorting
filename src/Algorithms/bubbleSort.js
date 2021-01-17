@@ -1,5 +1,4 @@
-import { Paper } from '@material-ui/core';
-import React from 'react';
+
 
 function rand(maxLimit = 100){
     let rand = Math.random() * maxLimit;
@@ -20,17 +19,3 @@ function Bubble (array)  {
 }
 
 
-
-export default class BubbleSort extends React.Component{
-    
-       render(){
-           console.log(this.props)
-        return(
-           <div>
-               <Paper>
-                  
-               </Paper>
-           </div> 
-        );
-    }
-}
