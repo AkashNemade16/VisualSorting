@@ -1,4 +1,4 @@
-export default function selection(array){
+function selection(array){
     for(let i=0;i<array.length;i++){
         let min = i;
         let minValue = array[i];
@@ -15,3 +15,10 @@ export default function selection(array){
     } return array;
 }
 
+const a = [];
+for(var i=0; i<100; i++){
+    a[i] = Math.floor(Math.random()*100+1);
+}
+
+
+console.log(selection(a));

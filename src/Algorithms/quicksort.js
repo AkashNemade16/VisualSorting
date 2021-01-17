@@ -2,7 +2,6 @@ function quickSort(array) {
 	//8 5 2 9 5 6 3
 	partition(array,0,array.length-1);
 	return array;
-  // Write your code here.
 }
 
 function partition(array, startIdx, endIdx){

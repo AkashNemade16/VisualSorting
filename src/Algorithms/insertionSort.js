@@ -1,4 +1,4 @@
-export default function insertionSort(array){
+function insertionSort(array){
     for(let i=1;i<array.length;i++){
         let j = i;
         while(j>0&&array[j]<array[j-1]){
@@ -10,3 +10,9 @@ export default function insertionSort(array){
     }return array;
 }
 
+const a = [];
+for(var i=0; i<100; i++){
+    a[i] = Math.floor(Math.random()*100+1);
+}
+
+console.log(insertionSort(a));

@@ -1,10 +1,3 @@
-
-
-function rand(maxLimit = 100){
-    let rand = Math.random() * maxLimit;
-    return Math.floor(rand);
-}
-
 function Bubble (array)  {
     for(let i=0;i<=array.length;i++){
         for(let j=0;j<=array.length;j++){
@@ -19,3 +12,10 @@ function Bubble (array)  {
 }
 
 
+const a = [];
+for(var i=0; i<100; i++){
+    a[i] = Math.floor(Math.random()*100+1);
+}
+
+
+console.log(Bubble(a));
