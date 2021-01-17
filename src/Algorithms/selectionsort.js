@@ -1,4 +1,4 @@
-function selection(array){
+export function selection(array){
     for(let i=0;i<array.length;i++){
         let min = i;
         let minValue = array[i];

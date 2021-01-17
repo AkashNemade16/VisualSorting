@@ -1,4 +1,4 @@
-function quickSort(array) {
+export function Quick(array) {
 	//8 5 2 9 5 6 3
 	partition(array,0,array.length-1);
 	return array;
@@ -41,4 +41,4 @@ for(var i=0; i<100; i++){
     a[i] = Math.floor(Math.random()*100+1);
 }
 
-console.log(quickSort(a));
+console.log(Quick(a));
