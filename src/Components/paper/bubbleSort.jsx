@@ -1,6 +1,7 @@
 import React from 'react';
 import {Paper,makeStyles} from '@material-ui/core';
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
       display: 'flex',
@@ -18,7 +19,7 @@ export default function Bubble(){
 
     return(
         <div className = {classes.root}>
-            <Paper height="25%" elevation={3}/>
+            <Paper  elevation={3}/>
         </div>
     )
 }
