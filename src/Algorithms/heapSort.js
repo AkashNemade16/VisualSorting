@@ -1,60 +1,46 @@
-let MaxHeap = function() {
-	
-	let heap = [null];
-	
-	this.print = () => heap;
+var arrayLength;
+function heapSort(array){
+    buildHeap(array);
 
-	this.insert = function(num) {
-		heap.push(num);
-		if (heap.length > 2) {
-			let idx = heap.length - 1;
-			while (heap[idx] > heap[Math.floor(idx/2)]) {
-				if (idx >= 1) {
-					[heap[Math.floor(idx/2)], heap[idx]] = [heap[idx], heap[Math.floor(idx/2)]];
-					if (Math.floor(idx/2) > 1) {
-						idx = Math.floor(idx/2);
-					} else {
-						break;
-					};
-				};
-			};
-		};
-	};
-	
-	this.remove = function() {
-		let smallest = heap[1];
-		if (heap.length > 2) {
-			heap[1] = heap[heap.length - 1];
-			heap.splice(heap.length - 1);
-			if (heap.length === 3) {
-				if (heap[1] < heap[2]) {
-					[heap[1], heap[2]] = [heap[2], heap[1]];
-				};
-				return smallest;
-			};
-			let i = 1;
-			let left = 2 * i;
-			let right = 2 * i + 1;
-			while (heap[i] <= heap[left] || heap[i] <= heap[right]) {
-				if (heap[left] > heap[right]) {
-					[heap[i], heap[left]] = [heap[left], heap[i]];
-					i = 2 * i
-				} else {
-					[heap[i], heap[right]] = [heap[right], heap[i]];
-					i = 2 * i + 1;
-				};
-				left = 2 * i;
-				right = 2 * i + 1;
-				if (heap[left] === undefined || heap[right] === undefined) {
-					break;
-				};
-			};
-		} else if (heap.length === 2) {
-			heap.splice(1, 1);
-		} else {
-			return null;
-		};
-		return smallest;
-	};
+    for(let i=array.length-1;i>0;i++){
+        swap(array,0,i);
+        arrayLength --;
+        heapify(array,0);
+    }return array;
+}
 
-};
+function buildHeap(array){
+    arrayLength = array.length;
+
+    for(let i = Math.floor(arrayLength/2);i>=0;i++){
+        heapify(array,i);
+    }
+}
+
+function heapify(array,i){
+    
+    let leftChild = 2*i+1;
+    let rightChild = 2*i+2;
+    let max = i;
+    
+    if(leftChild<arrayLength && array[leftChild]>array[max]){
+        max = leftChild;
+    }
+    if(rightChild<arrayLength && array[rightChild]>array[max]){
+        max = rightChild;
+    }
+    if(max!==i){
+        swap(array,i,max);
+        heapify(array,max);
+    }
+   
+}
+
+function swap(a,b,array){
+let temp = array[a];
+ array[a]  = array[b];
+ array[b] = temp;
+}
+
+var example = [10,20,15,30,40];
+console.log(heapSort(example));
