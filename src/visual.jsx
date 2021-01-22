@@ -1,9 +1,9 @@
 import React, {useState,useEffect} from 'react';
 import {Grid,Button, Typography } from '@material-ui/core';
 import Bubble from './Algorithms/bubbleSort';
-import Insertion from './Algorithms/insertionSort';
-import Quick from './Algorithms/quicksort';
-import selection from './Algorithms/selectionsort';
+// import Insertion from './Algorithms/insertionSort';
+// import Quick from './Algorithms/quicksort';
+// import selection from './Algorithms/selectionsort';
 
 
   
@@ -14,7 +14,7 @@ const Visual = () =>{
     });
 
     function triggerBubble(){
-        setarray(Bubble(rand(1,10)));
+        setarray(Bubble(rand(1,100)));
     }
 
     // function generateRandomNum(){
@@ -38,7 +38,7 @@ const Visual = () =>{
             <Grid container spacing={3}>
                 <Button onClick = {triggerBubble}>Bubble</Button>
                 <Typography>
-                   {array} 
+                 {array} 
                 </Typography>
             </Grid>
         </div>
