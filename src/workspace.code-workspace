@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "..\\.."
+		},
+		{
+			"name": "Leetcode",
+			"path": "..\\..\\..\\Leetcode"
+		},
+		{
+			"path": "..\\..\\..\\Competetive coding"
+		}
+	]
+}

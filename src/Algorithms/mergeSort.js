@@ -1,9 +1,9 @@
-function MergeSort(array){
+export function MergeSort(array){
     if(array.length<=1){return array}
-const midIdx = Math.floor(array.length/2);//midpoint of  an array
-const left = array.slice(0,midIdx);
-const right = array.slice(midIdx);
-return Merge(MergeSort(left),MergeSort(right));
+    const midIdx = Math.floor(array.length/2);//midpoint of  an array
+    const left = array.slice(0,midIdx);
+    const right = array.slice(midIdx);
+    return Merge(MergeSort(left),MergeSort(right));
 }
 
 function Merge(left,right){
