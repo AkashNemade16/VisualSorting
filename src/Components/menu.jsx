@@ -31,6 +31,7 @@ export default function SimpleMenu() {
         <MenuItem onClick={handleClose}>BubbleSort</MenuItem>
         <MenuItem onClick={handleClose}>QuickSort</MenuItem>
         <MenuItem onClick={handleClose}>MergeSort</MenuItem>
+        
       </Menu>
     </div>
   );
