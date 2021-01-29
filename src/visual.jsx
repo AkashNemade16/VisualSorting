@@ -1,7 +1,6 @@
-import React, {useState,useEffect} from 'react';
+import React, { Component} from 'react';
 import {Grid,Button, Typography } from '@material-ui/core';
-import Bubble from './Algorithms/bubbleSort';
-import BarChart from './Components/Charts/Charts';
+
 // import Insertion from './Algorithms/insertionSort';
 // import Quick from './Algorithms/quicksort';
 // import selection from './Algorithms/selectionsort';
@@ -9,47 +8,53 @@ import BarChart from './Components/Charts/Charts';
 
   
 
-const Visual = ({initialArray}) =>{
-    const [array,setarray] = useState(initialArray);
+export default class Visual extends Component{
+     constructor(props) {
+    super(props);
 
+    this.state = {
+      array: [],
+    };
+  }
 
-   
-    function rand(min, max) {
-        let randomNum = Math.random() * (max - min) + min;
-        return Math.floor(randomNum);
-      }
+  componentDidMount() {
+    this.resetArray();
+  }
 
-    function resetArray(){
+    
+
+    resetArray(){
       const array=[];
       for(let i=0;i<100;i++){
         array.push(rand(5,1000));
       }
-      setarray(array);
+      this.setState({array});
     }
+    render(){
 
-    return(
+       const {array} = this.state;
+
+      return(
+        
+      
         <div className='visual'>
-            {/* Array:{array} */}
+          
             <Grid container spacing={3}>
-                <Typography>
-                 
-                </Typography>
+               <h1>hi</h1>
             </Grid>
-            <>
-           {
-               array.map((value,idx)=>(
-                  <div className='akash' key={idx}>
-                      {value};
-                  </div> 
-               ))
-           }
-            </>
-             <Button onClick={resetArray}>Reset</Button>
+                      
+             <Button onClick={() => this.resetArray()}>Reset</Button>
         </div>
-    )
-}
+      )
+    }
     
-export default Visual;   
+}
+  
+function rand  (min, max)  {
+        let randomNum = Math.random() * (max - min) + min;
+        return Math.floor(randomNum);
+      }
+   
       
      
    
