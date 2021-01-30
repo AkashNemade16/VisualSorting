@@ -16,9 +16,7 @@ export default function SimpleMenu() {
 
   return (
     <div>
-      <Button color='inherit' aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-        Algorithms
-      </Button>
+      
       <Menu
         id="simple-menu"
         anchorEl={anchorEl}
@@ -31,6 +29,7 @@ export default function SimpleMenu() {
         <MenuItem onClick={handleClose}>BubbleSort</MenuItem>
         <MenuItem onClick={handleClose}>QuickSort</MenuItem>
         <MenuItem onClick={handleClose}>MergeSort</MenuItem>
+        
         
       </Menu>
     </div>

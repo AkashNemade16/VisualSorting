@@ -2,16 +2,17 @@ import React from 'react';
 import {Bar} from 'react-chartjs-2';
 
 
+//bring array values and id here
 
-const BarChart = () => {
-   
+const BarChart = (props) => {
+   console.log(props)
     return <div>
         <Bar
         data={{
                 labels:['Red','Blue','Yellow','Green','Purple','Orange'],
                 datasets:[
                     {
-                         data: [],
+                         data: [props.data],
                          backgroundColor:[
                               'rgba(255, 99, 132, 0.2)',
                                 'rgba(54, 162, 235, 0.2)',
