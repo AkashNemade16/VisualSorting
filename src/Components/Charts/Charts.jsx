@@ -4,12 +4,15 @@ import {Bar} from 'react-chartjs-2';
 
 //bring array values and id here
 
+
 const BarChart = (props) => {
-   console.log(props)
+   console.log(props);
+
     return <div>
+        <button>random</button>
         <Bar
         data={{
-                labels:['Red','Blue','Yellow','Green','Purple','Orange'],
+                // labels:['Red','Blue','Yellow','Green','Purple','Orange'],
                 datasets:[
                     {
                          data: [props.data],

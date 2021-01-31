@@ -4,8 +4,8 @@ import {Grid,Button,makeStyles, Typography} from '@material-ui/core';
 import Bar from './Components/Charts/Charts';
 
 //should render random numbers even onpress
-export default function Visual(){
-  
+export default function Visual(props){
+  // console.log(props);
   const [array,setArray] = useState();
   console.log(array);
   useEffect(()=>{
@@ -19,7 +19,17 @@ export default function Visual(){
     }
      setArray({array});
   }
-
+  // function ArrayList(props){
+  //   const array= props.array
+  //   const arrayItems= array.maps((array)=>
+  //     <li key={array.toString()}>
+  //     {arrayItems}
+  //   </li>
+  //   );
+  //   return(
+  //     <ul>{arrayItems}</ul>
+  //   )
+  // }
   
   // const returnedArray = Array.from(array);
   // console.log(returnedArray);
@@ -34,8 +44,12 @@ export default function Visual(){
       >
         <SimpleMenu />
           
-        <Bar data={array}/>
-        
+        <Bar data={setArray}/>
+       <>
+       {
+
+       }
+       </>
             
          <Button variant="contained" color="primary" onClick={()=>resetArray()}>
         Reset Array
