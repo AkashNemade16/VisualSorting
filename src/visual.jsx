@@ -32,9 +32,20 @@ export default class Visual extends Component {
    
 
   render() {
+    const {array} = this.state;
     return (
       <div>
-
+        <SimpleMenu/>
+        <Bar data={array}/>
+        <div className="array-container">
+        {array.map((value, idx) => (
+          <div
+            className="array-bar"
+            key={idx}
+           >{value}</div>
+        ))}
+        <Button color="secondary">Reset Array</Button> 
+      </div>
       </div>
     )
   }
