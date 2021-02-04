@@ -57,8 +57,7 @@ function rand (min, max)  {
         return Math.floor(randomNum);
       }
   
-  // const returnedArray = Array.from(array);
-  // console.log(returnedArray);
+
   
 
  
