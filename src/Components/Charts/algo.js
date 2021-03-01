@@ -92,6 +92,7 @@ const mergeSort = async reference => {
     }
 };
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
     shuffle: shuffle,
     bubbleSort: bubbleSort,
