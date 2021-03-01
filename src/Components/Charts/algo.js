@@ -94,5 +94,6 @@ const mergeSort = async reference => {
 
 export default {
     shuffle: shuffle,
-    bubbleSort: bubbleSort
+    bubbleSort: bubbleSort,
+    mergeSort : mergeSort,
 };

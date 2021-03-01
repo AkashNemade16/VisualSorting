@@ -1,8 +1,8 @@
 import React from 'react';
 import {Bar} from 'react-chartjs-2';
 import Select from 'react-select';
-import algo from './Algorithms/algo.js';
-import './Chart.css';
+import algo from './algo';
+import './chart.css';
 
 //bring array values and id here
 class Bars extends React.Component {
@@ -12,8 +12,8 @@ class Bars extends React.Component {
     selectedAlgorithm: algo.bubbleSort,
     algorithms: [
       { name: algo.bubbleSort, label: 'Bubble Sort' },
-      { name: 'strawberry', label: 'Quick Sort' },
-      { name: 'vanilla', label: 'Merge Sort' }
+      // { name: algo.quickSort, label: 'Quick Sort' },
+      { name: algo.mergeSort, label: 'Merge Sort' }
     ]
   };
   arraySorted = false;

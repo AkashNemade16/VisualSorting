@@ -1,11 +1,8 @@
-import './Components/header/Header';
-import Header from './Components/header/Header';
-import Visual from './visual';
+import Bar from './Components/Charts/Charts'
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <Visual/>
+      <Bar/>
     </div>
   );
 }
