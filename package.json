@@ -24,6 +24,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "parser": "babel-eslint",
     "extends": [
       "react-app",
       "react-app/jest"
@@ -42,7 +43,10 @@
     ]
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "eslint": "^7.17.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-disable": "^2.0.1"
   }
 }
